@@ -60,7 +60,7 @@ set background=light
 " Basics
 
 inoremap jk <ESC>
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Arrows are unvimlike 
 
@@ -100,7 +100,6 @@ nnoremap <leader>r :!!<CR>
 nnoremap <leader>m :normal @a
 nnoremap <leader>l :CtrlP<CR>
 nnoremap <leader>nt :NERDTree<CR>
-nnoremap <leader>s :set spell!<CR>
 nnoremap <leader>n :set nonumber!<CR>
 nnoremap <leader>rn :set norelativenumber!<CR>
 nnoremap <leader>c :nohl<CR>
@@ -114,6 +113,7 @@ vnoremap <leader>gq :!pandoc -f html -t markdown<CR>
 vnoremap <leader>wc :w !wc<CR>
 nnoremap <leader>nb yypwC
 nnoremap <leader>nb yypwC
+nnoremap <leader>w :w<CR>
 
 " Control shortcuts
 
