@@ -47,20 +47,16 @@ set wrap
 set linebreak
 set nolist
 set formatoptions=qrn1
-set spell spelllang=en_us
-set colorcolumn=80
-
-" Aesthetics
-
-colorscheme solarized
-set background=light
 
 " Mappings and shortcuts
 
 " Basics
 
 inoremap jk <ESC>
-let mapleader = "\<Space>"
+let mapleader = " "
+
+" Config
+:set spell spelllang=en_us
 
 " Arrows are unvimlike 
 
@@ -72,6 +68,10 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+" Disable the ESC key
+
+inoremap <esc> <NOP>
 
 " Miscellaneous 
 
@@ -95,25 +95,22 @@ nnoremap <leader>j VipJ
 nnoremap <leader>q gqip
 nnoremap <leader>f 1z=
 nnoremap <leader>s ]s
+nnoremap <leader>u :!git pull website master && git commit -am 'Standard commit.' && git push website master<CR><CR>
+nnoremap <leader>p :!git commit -am 'Standard commit.' && git push origin master<CR><CR>
 nnoremap <leader>d :read !date<CR>
 nnoremap <leader>r :!!<CR>
 nnoremap <leader>m :normal @a
 nnoremap <leader>l :CtrlP<CR>
 nnoremap <leader>nt :NERDTree<CR>
+nnoremap <leader>s :set spell!<CR>
 nnoremap <leader>n :set nonumber!<CR>
 nnoremap <leader>rn :set norelativenumber!<CR>
 nnoremap <leader>c :nohl<CR>
 nnoremap <leader>pa :set nopaste!<CR>
 nnoremap <leader>rc :so $MYVIMRC<CR>
-nnoremap <leader>d :BlogSave draft<CR>
 nnoremap <leader>p :BlogSave publish<CR>
 nnoremap <leader>h :set ft=HTML<CR><CR>
-nnoremap <leader>gq :%!pandoc -f html -t markdown<CR>
-vnoremap <leader>gq :!pandoc -f html -t markdown<CR>
-vnoremap <leader>wc :w !wc<CR>
-nnoremap <leader>nb yypwC
-nnoremap <leader>nb yypwC
-nnoremap <leader>w :w<CR>
+nnoremap <leader>d :BlogSave draft<CR><CR>
 
 " Control shortcuts
 
