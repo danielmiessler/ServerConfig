@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd ~/ServerConfig
+aptitude install git
 aptitude install zsh
 zsh
 setopt EXTENDED_GLOB
